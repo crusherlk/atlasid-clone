@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-function DataTable({ lgaInfo }) {
-  const { tableData, lgaName } = lgaInfo;
+function DataTable({ data}) {
+  const { tableData, name } = data;
 
   return (
     <div className="bg-white w-[400px]">
@@ -16,39 +16,39 @@ function DataTable({ lgaInfo }) {
         <tbody className="text-start">
           <tr className="">
             <td className="p-1">Age_0_4_yr</td>
-            <td className="p-1">{tableData["Age_0_4_yr_M"]}</td>
-            <td className="p-1">{tableData["Age_0_4_yr_F"]}</td>
-            <td className="p-1">{tableData["Age_0_4_yr_P"]}</td>
+            <td className="p-1">{tableData?.["Age_0_4_yr_M"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_0_4_yr_F"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_0_4_yr_P"] || "n/a"}</td>
           </tr>
           <tr>
             <td className="p-1">Age_5_14_yr</td>
-            <td className="p-1">{tableData["Age_5_14_yr_M"]}</td>
-            <td className="p-1">{tableData["Age_5_14_yr_F"]}</td>
-            <td className="p-1">{tableData["Age_5_14_yr_P"]}</td>
+            <td className="p-1">{tableData?.["Age_5_14_yr_M"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_5_14_yr_F"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_5_14_yr_P"] || "n/a"}</td>
           </tr>
           <tr>
             <td className="p-1">Age_15_19_yr</td>
-            <td className="p-1">{tableData["Age_15_19_yr_M"]}</td>
-            <td className="p-1">{tableData["Age_15_19_yr_F"]}</td>
-            <td className="p-1">{tableData["Age_15_19_yr_P"]}</td>
+            <td className="p-1">{tableData?.["Age_15_19_yr_M"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_15_19_yr_F"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_15_19_yr_P"] || "n/a"}</td>
           </tr>
           <tr>
             <td className="p-1">Age_20_24_yr</td>
-            <td className="p-1">{tableData["Age_20_24_yr_M"]}</td>
-            <td className="p-1">{tableData["Age_20_24_yr_F"]}</td>
-            <td className="p-1">{tableData["Age_20_24_yr_P"]}</td>
+            <td className="p-1">{tableData?.["Age_20_24_yr_M"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_20_24_yr_F"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_20_24_yr_P"] || "n/a"}</td>
           </tr>
           <tr>
             <td className="p-1">Age_25_34_yr</td>
-            <td className="p-1">{tableData["Age_25_34_yr_M"]}</td>
-            <td className="p-1">{tableData["Age_25_34_yr_F"]}</td>
-            <td className="p-1">{tableData["Age_25_34_yr_P"]}</td>
+            <td className="p-1">{tableData?.["Age_25_34_yr_M"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_25_34_yr_F"] || "n/a"}</td>
+            <td className="p-1">{tableData?.["Age_25_34_yr_P"] || "n/a"}</td>
           </tr>
         </tbody>
       </table>
       <p className="text-sm mt-4">
         Population data recorded in{" "}
-        <span className="underline italic">{lgaName}</span>, Australia
+        <span className="underline italic">{name}</span>, Australia
       </p>
     </div>
   );

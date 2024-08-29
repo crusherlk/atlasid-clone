@@ -1,8 +1,5 @@
-import { useState } from "react";
-
-function Header() {
-  const [maptype, setMaptype] = useState("lga");
-
+/* eslint-disable react/prop-types */
+function Header({ maptype, setMaptype, setSelectedData }) {
   return (
     <>
       <div className="flex justify-between items-center h-12 bg-blue-950 px-4">
@@ -12,11 +9,14 @@ function Header() {
           id="map-type"
           className="w-[150px]"
           value={maptype}
-          onChange={(e) => setMaptype(e.target.value)}
+          onChange={(e) => {
+            setMaptype(e.target.value);
+            setSelectedData(undefined);
+          }}
         >
-          <option value="lga">LGA</option>
-          <option value="sal">SAL</option>
-          <option value="poa">POA</option>
+          <option value="LGA">LGA</option>
+          <option value="SAL">SAL</option>
+          <option value="POA">POA</option>
         </select>
       </div>
     </>
